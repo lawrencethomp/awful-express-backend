@@ -6,7 +6,8 @@
     "prestart": "babel ./src --out-dir build",
     "startdev": "nodemon --exec babel-node ./src/bin/server.js",
     "start": "node ./build/bin/server.js",
-    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register"
+    "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "@babel/cli": "^7.16.0",
