@@ -6,6 +6,7 @@
     "prestart": "babel ./src --out-dir build",
     "startdev": "nodemon --exec babel-node ./src/bin/server.js",
     "start": "node ./build/bin/server.js",
+    "runQuery": "babel-node ./src/utils/runQuery",
     "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -29,6 +30,7 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
     "nyc": "^15.1.0",
+    "pg": "^8.7.1",
     "sinon-chai": "^3.7.0",
     "supertest": "^6.1.6"
   }
